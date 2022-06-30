@@ -4,13 +4,13 @@ using MediatR;
 
 namespace CQRS_MediatR_NET_6.Handlers.Queries;
 
-public class GetPostByIdQueryHandler : IRequestHandler<GetPostByIdRequestModel, GetPostByIdResponseModel>
+public class GetPostQueryHandler : IRequestHandler<GetPostRequestModel, GetPostResponseModel>
 {
-    public async Task<GetPostByIdResponseModel> Handle(GetPostByIdRequestModel request, CancellationToken cancellationToken)
+    public async Task<GetPostResponseModel> Handle(GetPostRequestModel request, CancellationToken cancellationToken)
     {
         // your logic get post...
 
-        return new GetPostByIdResponseModel()
+        return new GetPostResponseModel()
         {
             Body = "It is a long established fact that a reader will...",
             Id = Guid.Parse("556b8afa-5617-425c-87af-381f278ccf90"),

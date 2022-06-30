@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace CQRS_MediatR_NET_6.Validators;
 
-public class GetPostByIdQueryValidator : AbstractValidator<GetPostByIdRequestModel>
+public class GetPostQueryValidator : AbstractValidator<GetPostRequestModel>
 {
-    public GetPostByIdQueryValidator()
+    public GetPostQueryValidator()
     {
         RuleFor(v => v.PostId)
             .NotNull()

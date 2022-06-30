@@ -37,13 +37,13 @@ public class UnitTest1
     [Fact]
     public void GetPostById_Success_Result()
     {
-        _mediator.Setup(a => a.Send(It.IsAny<GetPostByIdRequestModel>(), new CancellationToken()))
-            .ReturnsAsync(new GetPostByIdResponseModel { Id = Guid.NewGuid(), UserId = Guid.NewGuid(), Body = "", Title = "" });
+        _mediator.Setup(a => a.Send(It.IsAny<GetPostRequestModel>(), new CancellationToken()))
+            .ReturnsAsync(new GetPostResponseModel { Id = Guid.NewGuid(), UserId = Guid.NewGuid(), Body = "", Title = "" });
 
         var postController = new PostController(_mediator.Object);
 
         //Action
-        var result = postController.Get(new GetPostByIdRequestModel());
+        var result = postController.Get(new GetPostRequestModel());
 
         //Assert
         Assert.IsType<OkObjectResult>(result);

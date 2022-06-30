@@ -16,7 +16,7 @@ namespace CQRS_MediatR_NET_6.Controllers
         }
 
         [HttpGet(Name = "postDetails")]
-        public IActionResult Get([FromQuery] GetPostByIdRequestModel request)
+        public IActionResult Get([FromQuery] GetPostRequestModel request)
         {
             var response = _mediator.Send(request);
             return Ok(response);

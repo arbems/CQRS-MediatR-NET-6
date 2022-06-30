@@ -1,6 +1,6 @@
 ﻿namespace CQRS_MediatR_NET_6.Models.Response;
 
-public class GetPostByIdResponseModel
+public class GetPostResponseModel
 {
     public Guid Id { get; set; }
 

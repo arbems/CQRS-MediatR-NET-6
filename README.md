@@ -1,2 +1,2 @@
-# CQRS y MediatR en .NET 6
-En este repositorio encontrará un ejemplo práctico de cómo usar patrones CQRS y Mediator con MediatR en .NET 6
+# CQRS & MediatR .NET
+Example of how to use CQRS patterns and Mediator with MediatR in .NET 6
